@@ -14,6 +14,13 @@
     </a>
 </li>
 
+<li class="sidebar-item {{ request()->is('products*') ? 'active' : '' }}">
+    <a href="{{ url('products') }}" class='sidebar-link'>
+        <i class="bi bi-people-fill"></i>
+        <span>Products</span>
+    </a>
+</li>
+
 {{-- Logout --}}
     <hr>
 
