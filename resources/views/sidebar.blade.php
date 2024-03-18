@@ -21,6 +21,13 @@
     </a>
 </li>
 
+<li class="sidebar-item {{ request()->is('transactions*') ? 'active' : '' }}">
+    <a href="{{ url('transactions') }}" class='sidebar-link'>
+        <i class="bi bi-people-fill"></i>
+        <span>Transaction</span>
+    </a>
+</li>
+
 {{-- Logout --}}
     <hr>
 

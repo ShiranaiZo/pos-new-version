@@ -14,14 +14,72 @@ namespace App\Models{
 /**
  * App\Models\Product
  *
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $sku
+ * @property int|null $price
+ * @property string|null $description
+ * @property string|null $image
+ * @property int|null $stock
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Product query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereSku($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereStock($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Product withoutTrashed()
  */
 	class Product extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Transaction
+ *
+ * @property int $id
+ * @property string|null $invoice_number
+ * @property string|null $name_product
+ * @property int|null $price_per_item
+ * @property int|null $quantity
+ * @property int|null $paid
+ * @property int|null $product_id
+ * @property int|null $cashier_id
+ * @property string|null $date
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereCashierId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereInvoiceNumber($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereNameProduct($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction wherePaid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction wherePricePerItem($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereQuantity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaction withoutTrashed()
+ */
+	class Transaction extends \Eloquent {}
 }
 
 namespace App\Models{
